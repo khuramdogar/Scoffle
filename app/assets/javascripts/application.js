@@ -12,14 +12,14 @@
 //
 //= require rails-ujs
 //= require lib/jquery-1.11.3.min.js
-// require turbolinks
+//= require turbolinks
 //= require general.js
+//= require jquery.carouFredSel-6.2.1-packed.js
 //= require lib/bootstrap.min.js
 //= require lib/modernizr.min.js
 //= require lib/respond.min.js
 //= require lib/html5shiv.js
 //= require jquery.datetimepicker.js
-//= require jquery.carouFredSel-6.2.1-packed.js
 //= require jquery.gmap.min.js
 //= require jquery.mmenu.min.all.js
 //= require jquery.parallax-1.1.3.js
