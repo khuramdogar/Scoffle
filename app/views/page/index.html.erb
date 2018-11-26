@@ -17,7 +17,7 @@
         <div id="myCarousel" class="carousel slide">
           <div class="carousel-inner">
             <!-- Carousel items -->
-            <div class="item active parallax" style="background-image:url(images/Home-Slider/slide-0.jpg);">
+            <div class="item active parallax" style="background-image:url(<%= asset_url("Home-Slider/slide-0.jpg") %>);">
               <div class="container">
                 <div class="soufle-itable">
                   <div class="soufle-icell">
@@ -66,8 +66,8 @@
     <section class="soufle-home-gallery">
       <!--Home Gallery Col1-->
       <div class="soufle-home-gallery-col col-sm-4">
-        <div class="soufle-home-gallery-block soufle-home-gallery-height-md" style="background-image: url('images/Home-Gallery/image-11.jpg')">
-          <a href="images/Home-Gallery/image-11.jpg" data-rel="prettyPhoto[1]" class="soufle-home-gallery-overlay">
+        <div class="soufle-home-gallery-block soufle-home-gallery-height-md" style="background-image: url(<%= asset_url("Home-Gallery/image-11.jpg") %>)">
+          <a href="Home-Gallery/image-11.jpg" data-rel="prettyPhoto[1]" class="soufle-home-gallery-overlay">
             <div class="soufle-itable">
               <div class="soufle-icell">
                 <i class="flyicon-expand"></i>
@@ -75,8 +75,8 @@
             </div>
           </a>
         </div>
-        <div class="soufle-home-gallery-block soufle-home-gallery-height-md" style="background-image: url('images/Home-Gallery/image-14.jpg')">
-          <a href="images/Home-Gallery/image-14.jpg" data-rel="prettyPhoto[1]" class="soufle-home-gallery-overlay">
+        <div class="soufle-home-gallery-block soufle-home-gallery-height-md" style="background-image: url(<%= asset_url("Home-Gallery/image-14.jpg") %>)">
+          <a href="<%= asset_url("Home-Gallery/image-11.jpg") %>" data-rel="prettyPhoto[1]" class="soufle-home-gallery-overlay">
             <div class="soufle-itable">
               <div class="soufle-icell">
                 <i class="flyicon-expand"></i>
@@ -84,8 +84,8 @@
             </div>
           </a>
         </div>
-        <div class="soufle-home-gallery-block soufle-home-gallery-height-md" style="background-image: url('images/Home-Gallery/image-15.jpg')">
-          <a href="images/Home-Gallery/image-15.jpg" data-rel="prettyPhoto[1]" class="soufle-home-gallery-overlay">
+        <div class="soufle-home-gallery-block soufle-home-gallery-height-md" style="background-image: url(<%= asset_url("Home-Gallery/image-15.jpg") %>)">
+          <a href="<%= asset_url("Home-Gallery/image-15.jpg") %>" data-rel="prettyPhoto[1]" class="soufle-home-gallery-overlay">
             <div class="soufle-itable">
               <div class="soufle-icell">
                 <i class="flyicon-expand"></i>
@@ -106,8 +106,8 @@
             </div>
           </div>
         </div>
-        <div class="soufle-home-gallery-block soufle-home-gallery-height-lg" style="background-image: url('images/Home-Gallery/image-12.jpg')">
-          <a href="images/Home-Gallery/image-12.jpg" data-rel="prettyPhoto[1]" class="soufle-home-gallery-overlay">
+        <div class="soufle-home-gallery-block soufle-home-gallery-height-lg" style="background-image: url(<%= asset_url("Home-Gallery/image-12.jpg") %>)">
+          <a href="<%= asset_url("Home-Gallery/image-12.jpg") %>" data-rel="prettyPhoto[1]" class="soufle-home-gallery-overlay">
             <div class="soufle-itable">
               <div class="soufle-icell">
                 <i class="flyicon-expand"></i>
@@ -116,8 +116,8 @@
           </a></div>
       </div>
       <div class="soufle-home-gallery-col col-sm-4">
-        <div class="soufle-home-gallery-block soufle-home-gallery-height-lg" style="background-image: url('images/Home-Gallery/image-13.jpg')">
-          <a href="images/Home-Gallery/image-13.jpg" data-rel="prettyPhoto[1]" class="soufle-home-gallery-overlay">
+        <div class="soufle-home-gallery-block soufle-home-gallery-height-lg" style="background-image: url(<%= asset_url("Home-Gallery/image-13.jpg") %>)">
+          <a href="<%= asset_url("Home-Gallery/image-13.jpg") %>" data-rel="prettyPhoto[1]" class="soufle-home-gallery-overlay">
             <div class="soufle-itable">
               <div class="soufle-icell">
                 <i class="flyicon-expand"></i>
@@ -125,8 +125,8 @@
             </div>
           </a>
         </div>
-        <div class="soufle-home-gallery-block soufle-home-gallery-height-md" style="background-image: url('images/Home-Gallery/image-17.jpg')">
-          <a href="images/Home-Gallery/image-17.jpg" data-rel="prettyPhoto[1]" class="soufle-home-gallery-overlay">
+        <div class="soufle-home-gallery-block soufle-home-gallery-height-md" style="background-image: url(<%= asset_url("Home-Gallery/image-17.jpg") %>)">
+          <a href="<%= asset_url("Home-Gallery/image-17.jpg") %>" data-rel="prettyPhoto[1]" class="soufle-home-gallery-overlay">
             <div class="soufle-itable">
               <div class="soufle-icell"><i class="flyicon-expand"></i></div>
             </div>
@@ -159,7 +159,7 @@
       <div class="row">
         <div class="soufle-slider-special-offers">
           <ul id="soufle-slider-special-offers">
-            <li data-special-offers-slider="1" style="background-image: url('images/news-slider/news-1.jpg')">
+            <li data-special-offers-slider="1" style="background-image: url(<%= asset_url("news-slider/news-1.jpg") %>)">
               <a href="#" class="soufle-wrap-offers">
                 <div class="soufle-content-offers-slider">
                   <div class="soufle-itable">
@@ -172,7 +172,7 @@
                 </div>
               </a>
             </li>
-            <li data-special-offers-slider="1" style="background-image: url('images/news-slider/news-2.jpg')">
+            <li data-special-offers-slider="1" style="background-image: url(<%= asset_url("news-slider/news-2.jpg") %>)">
               <a href="#" class="soufle-wrap-offers">
                 <div class="soufle-content-offers-slider">
                   <div class="soufle-itable">
@@ -185,7 +185,7 @@
                 </div>
               </a>
             </li>
-            <li data-special-offers-slider="1" style="background-image: url('images/news-slider/news-3.jpg')">
+            <li data-special-offers-slider="1" style="background-image: url(<%= asset_url("news-slider/news-3.jpg") %>)">
               <a href="#" class="soufle-wrap-offers">
                 <div class="soufle-content-offers-slider">
                   <div class="soufle-itable">
@@ -198,7 +198,7 @@
                 </div>
               </a>
             </li>
-            <li data-special-offers-slider="1" style="background-image: url('images/news-slider/news-4.jpg')">
+            <li data-special-offers-slider="1" style="background-image: url(<%= asset_url("news-slider/news-4.jpg") %>)">
               <a href="#" class="soufle-wrap-offers">
                 <div class="soufle-content-offers-slider">
                   <div class="soufle-itable">
@@ -211,7 +211,7 @@
                 </div>
               </a>
             </li>
-            <li data-special-offers-slider="1" style="background-image: url('images/news-slider/news-3.jpg');">
+            <li data-special-offers-slider="1" style="background-image: url(<%= asset_url("news-slider/news-3.jpg") %>);">
               <a href="#" class="soufle-wrap-offers">
                 <div class="soufle-content-offers-slider">
                   <div class="soufle-itable">
@@ -224,7 +224,7 @@
                 </div>
               </a>
             </li>
-            <li data-special-offers-slider="1" style="background-image: url('images/news-slider/news-4.jpg')">
+            <li data-special-offers-slider="1" style="background-image: url(<%= asset_url("news-slider/news-4.jpg") %>)">
               <a href="#" class="soufle-wrap-offers">
                 <div class="soufle-content-offers-slider">
                   <div class="soufle-itable">
@@ -237,7 +237,7 @@
                 </div>
               </a>
             </li>
-            <li data-special-offers-slider="1" style="background-image: url('images/news-slider/news-1.jpg')">
+            <li data-special-offers-slider="1" style="background-image: url(<%= asset_url("news-slider/news-1.jpg") %>)">
               <a href="#" class="soufle-wrap-offers">
                 <div class="soufle-content-offers-slider">
                   <div class="soufle-itable">
@@ -250,7 +250,7 @@
                 </div>
               </a>
             </li>
-            <li data-special-offers-slider="1" style="background-image: url('images/news-slider/news-2.jpg')">
+            <li data-special-offers-slider="1" style="background-image: url(<%= asset_url("news-slider/news-2.jpg") %>)">
               <a href="#" class="soufle-wrap-offers">
                 <div class="soufle-content-offers-slider">
                   <div class="soufle-itable">
@@ -265,7 +265,7 @@
             </li>
           </ul>
           <!--Offers Slider Control-->
-          <div class="soufle-offers-slider-control" style="background-image: url('images/news-slider/central-image.jpg');">
+          <div class="soufle-offers-slider-control" style="background-image: url(<%= asset_url("news-slider/central-image.jpg") %>);">
             <div class="soufle-itable">
               <div class="soufle-icell">
                 <div class="soufle-slider-control-wrap-title">
