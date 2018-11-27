@@ -1,0 +1,19 @@
+<div class="container bounceInRight">
+  <div class="card">
+    <div class="card-header">
+      <strong class="card-title">
+        <%= @item.name %>
+      </strong>
+      <strong class="card-actions">
+        <%= link_to 'Edit', edit_admin_category_item_path(@item.category, @item) %>
+      </strong>
+    </div>
+    <div class="card-body">
+      <strong>Description:</strong>
+      <%= @item.description %>
+    </div>
+  </div>
+  <strong class="card-actions">
+    <%= link_to 'Back', admin_category_path(@item.category) %>
+  </strong>
+</div>
