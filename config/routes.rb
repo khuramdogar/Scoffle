@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+
+  namespace :admin do
+    resources :categories
+  end
+
+
   root to: 'page#index'
   get '/menu/coffee', to: 'page#coffees'
   get '/menu/teas', to: 'page#teas'

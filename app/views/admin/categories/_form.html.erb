@@ -1,0 +1,28 @@
+<div class="card-body card-block">
+  <%= form_with(model: [:admin, category], local: true) do |form| %>
+    <% if category.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(admin_menu.errors.count, "error") %> prohibited this admin_menu from being saved:</h2>
+
+        <ul>
+          <% admin_menu.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="row">
+      <div class="col-md-6">
+        <div class="field">
+          <%= form.label :name %>
+          <%= form.text_field :name, class: "form-control" %>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-footer card-actions">
+      <%= form.submit class: "btn btn-primary" %>
+    </div>
+  <% end %>
+</div>

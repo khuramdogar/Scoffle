@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="description" content="Sufee Admin - HTML5 Admin Template">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="apple-icon.png">
+    <link rel="shortcut icon" href="favicon.ico">
+    <title>Vs Dashboard</title>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag 'admin/application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'admin/application', 'data-turbolinks-track' => true %>
+  </head>
+  <body style="background-color: #FFFFFF">
+    <%= render 'admin/layouts/side_bar' %>
+    <div id="right-panel" class="right-panel">
+      <%= render 'admin/layouts/header' %>
+      <%= yield %>
+    </div>
+    <%= render "admin/layouts/flash" %>
+  </body>
+</html>
