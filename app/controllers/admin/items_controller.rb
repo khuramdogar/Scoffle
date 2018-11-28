@@ -8,7 +8,8 @@ class Admin::ItemsController < Admin::BaseController
 
   def new
     @item = Item.new
-    @document = @item.build_document
+    @item.build_document
+    @item.item_prices.build
   end
 
   def edit
@@ -54,7 +55,7 @@ class Admin::ItemsController < Admin::BaseController
     end
 
     def item_params
-      params.require(:item).permit(:name, :description, document_attributes: [:doc,:doc_type,:_destroy])
+      params.require(:item).permit(:name, :description, document_attributes: [:doc, :doc_type, :_destroy], item_prices_attributes: [:price, :quantity, :size, :_destroy])
     end
 
     def set_category

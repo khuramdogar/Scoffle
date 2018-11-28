@@ -6,3 +6,4 @@
 //= require admin/main.js
 //= require admin/plugins.js
 //= require admin/popper.min.js
+//= require cocoon

@@ -2,19 +2,25 @@
 <html>
   <head>
     <title>So Soufflé | So Rich, So Smooth, So Good</title>
-<!--    <meta charset="utf-8">-->
-<!--    <meta name="author" content="">-->
-<!--    <meta name="keywords" content="">-->
-<!--    <meta name="viewport" content="width=device-width, initial-scale=1">-->
-
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <%= yield %>
+   <div>
+      <div class="spinner">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+          <div class="line4"></div>
+      </div>
+      <div id="page" class="hfeed site invisible">
+          <%= render 'layouts/header' %>
+          <%= yield %>
+          <%= render 'layouts/footer' %>
+      </div>
+   </div>
   </body>
 </html>

@@ -28,6 +28,29 @@
         </div>
       </div>
 
+
+        <%= form.fields_for :item_prices do |f| %>
+        <div class="col-md-12">
+          <div class="field">
+            <%= f.label :price %>
+            <%= f.number_field :price, class: "form-control" %>
+          </div>
+          <div class="field ">
+            <%= f.label :size %>
+            <%= f.text_field :size, class: "form-control" %>
+          </div>
+          <div class="field">
+            <%= f.label :quantity %>
+            <%= f.text_field :quantity, class: "form-control" %>
+          </div>
+        </div>
+
+        <% end  %>
+
+        <div class="container">
+          <%= link_to_add_association 'add prices', form, :item_prices, class:"form-group" %>
+        </div>
+
       <div class="col-md-12">
         <%= form.fields_for :document do |f| %>
           <div class="field">

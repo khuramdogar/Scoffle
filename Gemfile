@@ -15,9 +15,10 @@ gem 'jquery-rails', '~> 4.3', '>= 4.3.3'
 gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.4'
 gem 'paperclip', '~> 6.1'
 gem 'aws-sdk-s3', require: false
+gem 'cocoon', '~> 1.2', '>= 1.2.12'
 # gem 'redis', '~> 4.0'
 # gem 'bcrypt', '~> 3.1.7'
-gem 'better_errors', '~> 2.1', '>= 2.1.1'
+
 # gem 'mini_magick', '~> 4.8'
 
 # gem 'capistrano-rails', group: :development
@@ -30,6 +31,8 @@ end
 
 group :development do
   gem 'web-console', '>= 3.3.0'
+  gem 'better_errors', '~> 2.1', '>= 2.1.1'
+  gem 'binding_of_caller'
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
