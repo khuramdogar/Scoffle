@@ -19,16 +19,16 @@
           <%= form.text_field :name, class: "form-control" %>
         </div>
       </div>
-    </div>
 
-    <%= form.fields_for :document do |f| %>
-
-      <div class="form-group col-6">
-        <%= f.label :documents %>
-        <%= f.file_field :doc, class: "form-control" %>
+      <div class="col-md-12">
+          <%= form.fields_for :document do |f| %>
+            <div class="field">
+              <%= f.label :documents %>
+              <%= f.file_field :doc, class: "form-control" %>
+            </div>
+          <% end  %>
       </div>
-
-    <% end  %>
+    </div>
 
     <div class="card-footer card-actions">
       <%= form.submit class: "btn btn-primary" %>

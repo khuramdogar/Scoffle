@@ -1,0 +1,59 @@
+<div class="spinner">
+  <div class="line1"></div>
+  <div class="line2"></div>
+  <div class="line3"></div>
+  <div class="line4"></div>
+</div>
+<!--/ Loading Spinner -->
+<div id="page" class="hfeed site invisible">    <!--Header  (soufle-sticky-header-on)-->
+
+  <%= render 'page/header' %>
+  <div id="main" class="site-main" role="main">
+    <!--Header Section-->
+    <section class="soufle-section-image soufle-header-image soufle-section-overlay soufle-section-height-md parallax coffee-menu-bg"
+             style="background-image: url(<%= asset_url("Home-Slider/coffee-menu-heading-img.jpg") %>)">
+      <div class="container">
+        <div class="row">
+          <h3 class="soufle-section-image-title-before">MENU</h3>
+          <h2 class="soufle-section-image-title-after"><%= @category.name %></h2>
+        </div>
+      </div>
+    </section>
+    <!--End Header Section-->
+    <!--Contact Form Wrap-->
+    <div class="soufle-divider-space space-md" style="height: 70px"></div>
+    <!--Dish Menu 1-->
+    <section class="soufle-dish-menu container-min" id="food">
+      <div class="container">
+        <div class="row">
+          <h3 class="soufle-dish-menu-title">COFFEE MENU</h3>
+          <div class="col-md-6">
+            <ul class="soufle-dish-menu-content">
+
+              <% @items.each do |item|  %>
+              <li>
+                <div class="soufle-dish-menu-description">
+                  <div class="soufle-dish-image">
+                    <% if item.document %>
+                      <img src="<%= item.document.doc.url %>" alt="<%= item.name %>"/>
+                    <% else  %>
+                    <img src="<%= asset_url("Menu/food-1.jpg") %>" alt="Food 1"/>
+                    <% end  %>
+                  </div>
+                  <h5><%= item.name %></h5>
+                  <div><%= item.description %></div>
+                </div>
+              </li>
+             <% end  %>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="soufle-divider-space space-md"></div>
+    <!--End Contact Form Wrap-->
+  </div>
+  <!--Footer-->
+  <%= render 'page/footer' %>
+  <!-- End Footer -->
+</div>

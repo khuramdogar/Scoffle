@@ -1,5 +1,6 @@
 class PageController < ApplicationController
   def index
+    @menu_category = Category.all
   end
 
   def coffees

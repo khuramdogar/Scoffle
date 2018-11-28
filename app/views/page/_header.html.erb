@@ -19,13 +19,16 @@
             OUR MENU
           </a>
           <ul class="dropdown-menu food-menu" aria-labelledby="menuDropdownMenuLink">
-            <li><a class="dropdown-item" href="#">SOUFFLÉ</a></li>
-            <li>
-              <%= link_to "TEA", menu_teas_path %>
-            </li>
-            <li>
-              <%= link_to "COFFEE", menu_coffee_path %>
-            </li>
+
+            <% if @menu_category  %>
+            <% @menu_category.each do |category| %>
+              <li>
+                <%= link_to category.name, menu_path(category.id) %>
+              </li>
+            <% end  %>
+            <% else  %>
+              <li> No menu </li>
+            <% end %>
 <!--            <li><a class="dropdown-item" href="frappes.html">FRAPPÉS</a></li>-->
 <!--            <li><a class="dropdown-item" href="milkshakes.html">MILKSHAKES</a></li>-->
 <!--            <li><a class="dropdown-item" href="smoothies.html">SMOOTHIES</a></li>-->

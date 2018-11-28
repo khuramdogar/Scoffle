@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_28_083400) do
+ActiveRecord::Schema.define(version: 2018_11_28_095747) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -29,6 +29,14 @@ ActiveRecord::Schema.define(version: 2018_11_28_083400) do
     t.string "doc_content_type"
     t.integer "doc_file_size"
     t.datetime "doc_updated_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "item_prices", force: :cascade do |t|
+    t.integer "price"
+    t.string "quantity"
+    t.string "size"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

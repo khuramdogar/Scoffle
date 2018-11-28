@@ -8,6 +8,7 @@ class Admin::ItemsController < Admin::BaseController
 
   def new
     @item = Item.new
+    @document = @item.build_document
   end
 
   def edit
@@ -53,7 +54,7 @@ class Admin::ItemsController < Admin::BaseController
     end
 
     def item_params
-      params.require(:item).permit(:name, :description)
+      params.require(:item).permit(:name, :description, document_attributes: [:doc,:doc_type,:_destroy])
     end
 
     def set_category
