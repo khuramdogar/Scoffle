@@ -10,6 +10,7 @@ class Admin::CategoriesController < Admin::BaseController
 
   def new
     @category = Category.new
+    @document = @category.build_document
   end
 
   def edit
@@ -55,6 +56,6 @@ class Admin::CategoriesController < Admin::BaseController
     end
 
     def category_params
-      params.require(:category).permit(:name)
+      params.require(:category).permit(:name, document_attributes: [:doc,:doc_type,:_destroy])
     end
 end

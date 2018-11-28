@@ -13,6 +13,8 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'jquery-rails', '~> 4.3', '>= 4.3.3'
 gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.4'
+gem 'paperclip', '~> 6.1'
+gem 'aws-sdk-s3', require: false
 # gem 'redis', '~> 4.0'
 # gem 'bcrypt', '~> 3.1.7'
 
