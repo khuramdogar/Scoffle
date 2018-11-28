@@ -1,0 +1,59 @@
+<header class="soufle-header-site soufle-header-type-1 soufle-sticky-header-on">
+  <div class="soufle-nav-wrap soufle-nav-left">
+    <nav class="soufle-site-navigation primary-navigation" id="soufle-menu-primary">
+      <ul class="soufle-nav-menu">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" onClick="window.location = '#'">OUR STORY</a>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <li>
+              <a class="dropdown-item" href="#">OUR COFFEE</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">OUR SOUFFLÉ</a>
+            </li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" id="menuDropdownMenuLink"
+             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            OUR MENU
+          </a>
+          <ul class="dropdown-menu food-menu" aria-labelledby="menuDropdownMenuLink">
+
+            <% if @menu_category  %>
+            <% @menu_category.each do |category| %>
+              <li>
+                <%= link_to category.name, menu_path(category.id) %>
+              </li>
+            <% end  %>
+            <% else  %>
+              <li> No menu </li>
+            <% end %>
+<!--            <li><a class="dropdown-item" href="frappes.html">FRAPPÉS</a></li>-->
+<!--            <li><a class="dropdown-item" href="milkshakes.html">MILKSHAKES</a></li>-->
+<!--            <li><a class="dropdown-item" href="smoothies.html">SMOOTHIES</a></li>-->
+<!--            <li><a class="dropdown-item" href="#">SANDWICHES & SNACKS</a></li>-->
+<!--            <li><a class="dropdown-item" href="ice-cream.html">ICE CREAM</a></li>-->
+<!--            <li><a class="dropdown-item" href="extras.html">EXTRAS</a></li>-->
+          </ul>
+        </li>
+        <li><a href="#">SO SOUFFLÉ</a></li>
+      </ul>
+    </nav>
+  </div>
+  <!--Logo-->
+  <div class="soufle-wrap-logo">
+    <a class="soufle-logo" href="<%= root_path %>">
+      <img src="<%= asset_url("new_logo_so_souffle.png") %>" alt="Logo"/>
+    </a>
+  </div>
+  <div class="soufle-nav-wrap soufle-nav-right">
+    <nav class="soufle-site-navigation secondary-navigation" id="soufle-menu-secondary">
+      <ul class="soufle-nav-menu">
+        <li><a href="#">STORES</a></li>
+        <li><a href="#">TESTIMONIALS</a></li>
+        <li><a href="#">CONTACT US</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>

@@ -1,0 +1,70 @@
+<div class="card-body card-block">
+  <%= form_with(model: [:admin, @category, item], local: true) do |form| %>
+    <% if item.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(item.errors.count, "error") %> prohibited this menu item from being saved:</h2>
+
+        <ul>
+          <% item.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <%= form.hidden_field :category_id, :value => @category.id  %>
+
+    <div class="row">
+
+      <div class="col-md-12">
+        <div class="field">
+          <%= form.label :name %>
+          <%= form.text_field :name, class: "form-control" %>
+        </div>
+
+      </div>
+      <div class="col-md-12">
+        <div class="field">
+          <%= form.label :description %>
+          <%= form.text_area :description, class: "form-control" %>
+        </div>
+      </div>
+
+
+        <%= form.fields_for :item_prices do |f| %>
+        <div class="col-md-12">
+          <div class="field">
+            <%= f.label :price %>
+            <%= f.number_field :price, class: "form-control" %>
+          </div>
+          <div class="field ">
+            <%= f.label :size %>
+            <%= f.text_field :size, class: "form-control" %>
+          </div>
+          <div class="field">
+            <%= f.label :quantity %>
+            <%= f.text_field :quantity, class: "form-control" %>
+          </div>
+        </div>
+
+        <% end  %>
+
+        <div class="container">
+          <%= link_to_add_association 'add prices', form, :item_prices, class:"form-group" %>
+        </div>
+
+      <div class="col-md-12">
+        <%= form.fields_for :document do |f| %>
+          <div class="field">
+            <%= f.label :documents %>
+            <%= f.file_field :doc, class: "form-control" %>
+          </div>
+        <% end  %>
+      </div>
+    </div>
+
+    <div class="card-footer card-actions">
+      <%= form.submit class: "btn btn-primary" %>
+    </div>
+  <% end %>
+</div>

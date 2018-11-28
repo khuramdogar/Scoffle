@@ -23,7 +23,7 @@ Rails.application.configure do
   config.public_file_server.enabled = ENV['RAILS_SERVE_STATIC_FILES'].present?
 
   # Compress JavaScripts and CSS.
-  config.assets.js_compressor = :uglifier
+  config.assets.js_compressor = Uglifier.new(harmony: true)
   # config.assets.css_compressor = :sass
 
   # Do not fallback to assets pipeline if a precompiled asset is missed.
@@ -46,6 +46,16 @@ Rails.application.configure do
   # config.action_cable.url = 'wss://example.com/cable'
   # config.action_cable.allowed_request_origins = [ 'http://example.com', /http:\/\/example.*/ ]
 
+  config.paperclip_defaults = {
+      storage: :s3,
+      s3_credentials: {
+          bucket: "vsdashboard",
+          access_key_id:"AKIAJNZMCH5QC635FCTQ",
+          secret_access_key: "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",
+          s3_region: "us-east-1",
+          s3_host_name:"s3.amazonaws.com"
+      }
+  }
   # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
   # config.force_ssl = true
 
