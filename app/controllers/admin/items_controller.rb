@@ -17,7 +17,6 @@ class Admin::ItemsController < Admin::BaseController
 
   def create
     @item = Item.new(item_params)
-    @item.category = @category
     respond_to do |format|
       if @item.save
         format.html { redirect_to admin_category_path(@category), notice: 'Item was successfully created.' }
@@ -55,7 +54,7 @@ class Admin::ItemsController < Admin::BaseController
     end
 
     def item_params
-      params.require(:item).permit(:name, :description, document_attributes: [:doc, :doc_type, :_destroy], item_prices_attributes: [:price, :quantity, :size, :_destroy])
+      params.require(:item).permit(:name, :description, :category_id, document_attributes: [:doc, :doc_type, :_destroy], item_prices_attributes: [:price, :quantity, :size, :_destroy])
     end
 
     def set_category
